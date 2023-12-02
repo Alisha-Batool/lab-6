@@ -19,7 +19,8 @@
  * corresponding to the 3 input values and the expected output
  * value.
  */
-static void testMinValues(void **state) {
+static void testMinValues(void **state)
+ {
   //cast the generic state to an int array
   int *values = *((int **)state);
   assert_true( min(values[0], values[1], values[2]) == values[3]);
