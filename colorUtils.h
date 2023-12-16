@@ -30,7 +30,10 @@ int min(int a, int b, int c);
 
 /**
  * TODO: add documentation here
- * 
+ * @param a give the integer value
+ * @param b give the integer value
+ * @param c give the integer value
+ * @return the minimum of above three integers 
  */
 
 int toGrayScale(int *r, int *g, int *b, Mode mode);
