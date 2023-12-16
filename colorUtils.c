@@ -13,6 +13,8 @@ int min(int a, int b, int c) {
 
 int toGrayScale(int *r, int *g, int *b, Mode mode) {
   //TODO: implement
+  return ((*r + *g + *b) / 3);
+  return ((max(*r, *g, *b) + min(*r, *g, *b)) / 2);
 }
 
 int toSepia(int *r, int *g, int *b) {
