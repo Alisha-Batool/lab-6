@@ -13,15 +13,27 @@ int min(int a, int b, int c) {
 
 int toGrayScale(int *r, int *g, int *b, Mode mode) {
   //TODO: implement
-  return ((*r + *g + *b) / 3);
-  return ((max(*r, *g, *b) + min(*r, *g, *b)) / 2);
-  return (*r * 0.21 + *g * 0.72 + *b * 0.07);
-  
+  Mode AVERAGE;
+  AVERAGE= ((*r + *g + *b) / 3);
+  return AVERAGE;
+  Mode LIGHTNESS; 
+  LIGHTNESS= ((max(*r, *g, *b) + min(*r, *g, *b)) / 2);
+  return LIGHTNESS;
+  Mode LUMINOSITY;
+  LUMINOSITY= (*r * 0.21 + *g * 0.72 + *b * 0.07);
+  return LUMINOSITY;
+
 }
 
-int toSepia(int *r, int *g, int *b) {
+int toSepia(int *r, int *g, int *b, Mode mode) {
   //TODO: implement
-  return (*r * 0.393 + *g * 0.769 + *b * 0.189);
-  return (*r * 0.349 + *g * 0.686 + *b * 0.168);
-  return (*r * 0.272 + *g * 0.534 + *b * 0.131);
+  Mode RED;
+  RED= (*r * 0.393 + *g * 0.769 + *b * 0.189);
+  return RED;
+  Mode GREEN;
+  GREEN= (*r * 0.349 + *g * 0.686 + *b * 0.168);
+  return GREEN; 
+  Mode BLUE;
+  BLUE= (*r * 0.272 + *g * 0.534 + *b * 0.131);
+  return BLUE;
 }
